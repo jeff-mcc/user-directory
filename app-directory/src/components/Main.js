@@ -9,7 +9,8 @@ class Main extends Component{
         super()
         this.state = {
             dataArray: data,
-            index: 0
+            index: 0,
+            // nameLength: 14
         }
         this.handleData = this.handleData.bind(this)
     }
@@ -25,15 +26,15 @@ class Main extends Component{
     }
 
     render(){
-        // console.log(this.state.dataArray)
+        // console.log(this.state.dataArray[0].name.first.length)
         return(
             <div class='boxcontainer'>
                 <div class='whitebox'>
                     <DataDisplay inputData={this.state.dataArray} index={this.state.index}/>
                 </div>
                 <div class='underbox'>
-                    <button id='previous' onClick={e=>this.handleData(e.target)}>Previous</button>
-                    <button id='next' onClick={e=>this.handleData(e.target)}>Next</button>
+                    <button class="butn" id='previous' onClick={e=>this.handleData(e.target)}>{`< Previous`}</button>
+                    <button class="butn" id='next' onClick={e=>this.handleData(e.target)}>{`Next >`}</button>
                 </div>
             </div>
         )
