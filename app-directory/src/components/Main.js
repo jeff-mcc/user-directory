@@ -14,8 +14,14 @@ class Main extends Component{
         this.handleData = this.handleData.bind(this)
     }
 
-    handleData(){
-        
+    handleData(targ){
+        let id = targ.id;
+        let idx = this.state.index;
+        if (id==='next' && idx<24){
+            this.setState({index: idx+1})
+        } else if (id==='previous' && idx>0){
+            this.setState({index: idx-1})
+        }
     }
 
     render(){
@@ -23,11 +29,11 @@ class Main extends Component{
         return(
             <div class='boxcontainer'>
                 <div class='whitebox'>
-                    <DataDisplay inputData={this.state.dataArray}/>
+                    <DataDisplay inputData={this.state.dataArray} index={this.state.index}/>
                 </div>
                 <div class='underbox'>
-                    <button>Previous</button>
-                    <button>Next</button>
+                    <button id='previous' onClick={e=>this.handleData(e.target)}>Previous</button>
+                    <button id='next' onClick={e=>this.handleData(e.target)}>Next</button>
                 </div>
             </div>
         )
