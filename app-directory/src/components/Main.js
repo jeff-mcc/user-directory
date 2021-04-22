@@ -34,6 +34,11 @@ class Main extends Component{
                 </div>
                 <div class='underbox'>
                     <button class="butn" id='previous' onClick={e=>this.handleData(e.target)}>{`< Previous`}</button>
+                    <div class="inunderbox">
+                        <button class="cntrbtn">Edit</button>
+                        <button class="cntrbtn">Delete</button>
+                        <button class="cntrbtn">New</button>
+                    </div>
                     <button class="butn" id='next' onClick={e=>this.handleData(e.target)}>{`Next >`}</button>
                 </div>
             </div>
