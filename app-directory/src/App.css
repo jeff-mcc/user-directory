@@ -1,5 +1,8 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-color: rgb(34, 34, 34);
+  width: 100vw;
+  height: 100vh;
 }
 
 .App-logo {
@@ -53,4 +56,29 @@
   /* display: flex;
   align-items: center; */
   /* justify-content: center; */
+}
+
+.boxcontainer{
+  /* width: 100vw; */
+  /* height: 100vh; */
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.whitebox{
+  width: 70vw;
+  height: 50vh;
+  background-color: whitesmoke;
+}
+
+.underbox{
+  width: 70vw;
+  height: 5vh;
+  /* background-color:tomato; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
